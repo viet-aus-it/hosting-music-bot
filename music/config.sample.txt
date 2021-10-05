@@ -4,13 +4,6 @@
 // Source: https://jmusicbot.com/config/               //
 /////////////////////////////////////////////////////////
 
-
-token = BOT_TOKEN_HERE
-owner = YOUR_USER_ID_HERE
-prefix = ";;"
-eval=false
-
-
 // If you set this, it modifies the default game of the bot
 // Set this to NONE to have no game
 // Set this to DEFAULT to use the default game
@@ -28,7 +21,7 @@ status = ONLINE
 // If you set this to true, the bot will list the title of the song it is currently playing in its
 // "Playing" status. Note that this will ONLY work if the bot is playing music on ONE guild;
 // if the bot is playing on multiple guilds, this will not work.
-songinstatus=false
+songinstatus=true
 
 
 // If you set this, the bot will also use this prefix in addition to
@@ -62,7 +55,6 @@ npimages = false
 // so this option is not recommended if bandwidth is a concern.
 stayinchannel = false
 
-
 // This sets the maximum amount of seconds any track loaded can be. If not set or set
 // to any number less than or equal to zero, there is no maximum time length. This time
 // restriction applies to songs loaded from any source.
@@ -71,17 +63,15 @@ maxtime = 0
 // This sets the amount of seconds the bot will stay alone on a voice channel until it
 // automatically leaves the voice channel and clears the queue. If not set or set
 // to any number less than or equal to zero, the bot won't leave when alone.
-alonetimeuntilstop = 0
+alonetimeuntilstop = 60
 
 // This sets an alternative folder to be used as the Playlists folder
 // This can be a relative or absolute path
 playlistsfolder = "Playlists"
 
-
 // By default, the bot will DM the owner if the bot is running and a new version of the bot
 // becomes available. Set this to false to disable this feature.
 updatealerts=true
-
 
 // Changing this changes the lyrics provider
 // Currently available providers: "A-Z Lyrics", "Genius", "MusicMatch", "LyricsFreak"
@@ -104,9 +94,9 @@ aliases {
   // Music commands
   lyrics = []
   nowplaying = [ np, current ]
-  play = []
+  play = [ p ]
   playlists = [ pls ]
-  queue = [ list ]
+  queue = [ q, list ]
   remove = [ delete ]
   scsearch = []
   search = [ ytsearch ]
@@ -130,3 +120,8 @@ aliases {
   stop = []
   volume = [ vol ]
 }
+
+prefix = ";;"
+eval=false
+token = BOT_TOKEN_HERE
+owner = YOUR_USER_ID_HERE
