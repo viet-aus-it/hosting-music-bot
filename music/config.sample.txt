@@ -6,7 +6,7 @@
 
 
 token = BOT_TOKEN_HERE
-owner = 0
+owner = YOUR_USER_ID_HERE
 prefix = ";;"
 eval=false
 
