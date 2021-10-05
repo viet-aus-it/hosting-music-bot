@@ -12,4 +12,14 @@ owner = YOUR_USER_ID_HERE
 prefix = ";;"
 ```
 
-- Run `docker-compose up -d`
+- Build and run via docker-compose
+
+```bash
+# If you're using x86-64
+docker-compose build
+docker-compose up -d
+
+# If you're using ARM32
+docker-compose -f docker-compose.yml -f docker-compose.arm.yml build
+docker-compose -f docker-compose.yml -f docker-compose.arm.yml up -d
+```
