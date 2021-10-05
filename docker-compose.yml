@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  music-bot:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    image: viet-aus-it/music-bot:development
+    restart: unless-stopped
+    volumes:
+      - ./music/config.txt:/src/config.txt
+      - ./music/Playlists:/src/Playlists
