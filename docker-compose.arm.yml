@@ -1,5 +1,0 @@
-services:
-  music-bot:
-    build:
-      dockerfile: "Arm.Dockerfile"
-    image: viet-aus-it/music-bot:arm32v7
