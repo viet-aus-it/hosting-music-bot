@@ -97,7 +97,7 @@ aliases {
   play = [ p ]
   playlists = [ pls ]
   queue = [ q, list ]
-  remove = [ delete ]
+  remove = [ delete, rm ]
   scsearch = []
   search = [ ytsearch ]
   shuffle = []
@@ -111,7 +111,7 @@ aliases {
 
   // DJ Commands
   forceremove = [ forcedelete, modremove, moddelete ]
-  forceskip = [ modskip ]
+  forceskip = [ modskip, fs ]
   movetrack = [ move ]
   pause = []
   playnext = []
