@@ -8,4 +8,5 @@ services:
     env_file: './.env'
     volumes:
       - ./music/config.txt:/src/config.txt
+      - ./music/serversettings.json:/src/serversettings.json
       - ./music/Playlists:/src/Playlists
