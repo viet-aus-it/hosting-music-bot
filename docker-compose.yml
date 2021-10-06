@@ -3,7 +3,7 @@ services:
     build:
       context: "."
       dockerfile: "Dockerfile"
-    image: viet-aus-it/music-bot
+    image: ghcr.io/viet-aus-it/music-bot:production
     restart: unless-stopped
     env_file: './.env'
     volumes:
