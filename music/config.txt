@@ -123,5 +123,5 @@ aliases {
 
 prefix = ";;"
 eval=false
-token = BOT_TOKEN_HERE
-owner = YOUR_USER_ID_HERE
+token = ${BOT_TOKEN}
+owner = ${OWNER_ID}
