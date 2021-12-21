@@ -46,3 +46,25 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm,linux/arm64
           tags: ${{ steps.docker_meta.outputs.tags }}
+
+  deploy-to-cloud-server:
+    name: Deploy to Cloud Server
+    runs-on: ubuntu-latest
+    needs: build-step
+
+    steps:
+      - name: SSH into Cloud Server and deploy
+        uses: appleboy/ssh-action@master
+        env:
+          SSH_USER: ${{ secrets.SSH_USER_EC2_CHATBOT }}
+          REPO: ${{ github.event.repository.name }}
+        with:
+          envs: SSH_USER, REPO
+          host: ${{ secrets.SSH_HOST_EC2_CHATBOT }}
+          username: ${{ secrets.SSH_USER_EC2_CHATBOT }}
+          key: ${{ secrets.SSH_KEY_EC2_CHATBOT }}
+          script: |
+            /usr/local/bin/deploy-musicbot \
+              ${SSH_USER} \
+              ${REPO} \
+              /${REPO}/.env,.env
